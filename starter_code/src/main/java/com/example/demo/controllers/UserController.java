@@ -59,7 +59,7 @@ public class UserController {
 		user.setPassword(passwordEncoder.encode(createUserRequest.getPassword()));
 		userRepository.save(user);
 
-		logger.info("User created", user.getUsername());
+		logger.info("Created user with username, {}.", user.getUsername());
 		return ResponseEntity.ok(user);
 	}
 	

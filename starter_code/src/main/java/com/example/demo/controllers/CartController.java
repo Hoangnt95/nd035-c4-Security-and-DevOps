@@ -33,7 +33,8 @@ public class CartController {
         this.itemRepository = itemRepository;
     }
 
-    @PostMapping("/addToCart")
+
+	@PostMapping("/addToCart")
 	public ResponseEntity<Cart> addTocart(@RequestBody ModifyCartRequest request) {
 		User user = userRepository.findByUsername(request.getUsername());
 		if(user == null) {
