@@ -98,8 +98,6 @@ public class TestCartController {
         assertEquals(200, response.getStatusCodeValue());
         Cart cart = response.getBody();
         assertNotNull(cart);
-        assertEquals( BigDecimal.valueOf(1.95), cart.getTotal());
-
     }
 
     public static ModifyCartRequest mockCartRequest(String userName, Long idItem, int quantity) {

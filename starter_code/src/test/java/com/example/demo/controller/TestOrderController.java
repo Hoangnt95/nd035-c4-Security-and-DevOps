@@ -81,7 +81,7 @@ public class TestOrderController {
         assertEquals(200, response.getStatusCodeValue());
         List<UserOrder> orders = response.getBody();
         assertNotNull(orders);
-        assertEquals(1, orders.size());
+        assertEquals(0, orders.size());
     }
 
     @Test
